@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Health Justice Special Interest Group</title>
+  <meta name="description" content="Health Justice Special Interest Group – events, people, and resources advancing equity in health." />
+  <meta property="og:title" content="Health Justice Special Interest Group" />
+  <meta property="og:description" content="Events, people, and resources advancing equity in health." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0e7c86" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230e7c86'/><text x='50' y='58' font-size='54' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'>HJ</text></svg>">
+  <style>
+    :root{
+      --bg: #ffffff; --fg: #0e1b2a; --muted:#5b6b7a; --brand:#0e7c86; --brand-2:#0aa2b1; --surface:#f4f7fb; --ring: rgba(14,124,134,.25);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b0f14; --fg:#e6eef9; --muted:#a0b3c6; --surface:#111720; --ring: rgba(10,162,177,.25); }
+    }
+    *{ box-sizing:border-box }
+    html{ scroll-behavior:smooth }
+    body{ margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--fg)}
+    a{ color:var(--brand); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .container{ width:min(1100px, 92%); margin-inline:auto }
+    header{ position:sticky; top:0; z-index:100; backdrop-filter:saturate(140%) blur(8px); background:color-mix(in lab, var(--bg) 90%, transparent); border-bottom:1px solid color-mix(in lab, var(--fg) 10%, transparent) }
+    nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.75rem 0 }
+    .brand{ display:flex; align-items:center; gap:.75rem; font-weight:700 }
+    .brand .logo{ width:32px; height:32px; border-radius:8px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); display:grid; place-items:center; color:white; font-weight:800 }
+    .tabs{ display:flex; gap:.75rem; flex-wrap:wrap }
+    .tab{ padding:.5rem .75rem; border-radius:999px; border:1px solid transparent }
+    .tab:hover{ background:var(--surface) }
+    main section{ padding:4rem 0; scroll-margin-top:5rem }
+    .hero{ padding:5rem 0 3rem; background:linear-gradient(180deg, color-mix(in lab, var(--brand) 6%, var(--bg)), var(--bg)); border-bottom:1px solid color-mix(in lab, var(--fg) 10%, transparent) }
+    .hero h1{ font-size:clamp(1.75rem, 2.5vw + 1rem, 3rem); line-height:1.15; margin:0 0 .75rem }
+    .hero p{ color:var(--muted); max-width:60ch }
+    .cta{ display:flex; gap:.75rem; margin-top:1.25rem }
+    .btn{ display:inline-flex; align-items:center; gap:.5rem; padding:.65rem .95rem; border-radius:.75rem; border:1px solid color-mix(in lab, var(--fg) 14%, transparent); background:var(--bg) }
+    .btn.primary{ background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:white; border:none; box-shadow:0 6px 18px -6px var(--ring) }
+    h2{ font-size:1.6rem; margin:.25rem 0 1.25rem }
+    .lede{ color:var(--muted); margin-top:-.5rem; max-width:65ch }
+    /* Cards */
+    .grid{ display:grid; gap:1rem }
+    @media (min-width:680px){ .grid.cols-3{ grid-template-columns:repeat(3, 1fr)} }
+    @media (min-width:680px){ .grid.cols-2{ grid-template-columns:repeat(2, 1fr)} }
+    .card{ border:1px solid color-mix(in lab, var(--fg) 12%, transparent); border-radius:1rem; background:var(--surface); padding:1rem }
+    .badge{ display:inline-block; padding:.2rem .5rem; border-radius:.5rem; font-size:.8rem; background:color-mix(in lab, var(--brand) 15%, var(--bg)); border:1px solid color-mix(in lab, var(--brand) 25%, transparent) }
+    .event{ display:flex; gap:1rem }
+    .event time{ font-weight:700; min-width:8ch }
+    .people{ align-items:stretch }
+    .person{ display:flex; gap:1rem; align-items:center }
+    .avatar{ width:56px; height:56px; border-radius:50%; background:linear-gradient(135deg, var(--brand-2), var(--brand)); color:white; display:grid; place-items:center; font-weight:800 }
+    footer{ padding:3rem 0; border-top:1px solid color-mix(in lab, var(--fg) 10%, transparent); color:var(--muted) }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
+    .notice{ border-left:4px solid var(--brand); padding:.75rem 1rem; background:color-mix(in lab, var(--brand) 8%, var(--bg)); border-radius:.5rem }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Main">
+        <a class="brand" href="#home">
+          <span class="logo" aria-hidden="true">HJ</span>
+          <span>Health Justice SIG</span>
+        </a>
+        <div class="tabs" role="tablist">
+          <a class="tab" role="tab" href="#home">Main</a>
+          <a class="tab" role="tab" href="#events">Events</a>
+          <a class="tab" role="tab" href="#about">About</a>
+          <a class="tab" role="tab" href="#people">People</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container">
+      <h1>Health Justice Special Interest Group</h1>
+      <p class="lede">We are a community of practitioners, researchers, and advocates working to advance equity in health systems, data, and policy. Join us for talks, workshops, and collaborative projects.</p>
+      <div class="cta">
+        <a class="btn primary" href="#events">See upcoming events</a>
+        <a class="btn" href="#about">Learn more</a>
+      </div>
+    </div>
+  </main>
+
+  <section id="events" aria-labelledby="events-title">
+    <div class="container">
+      <h2 id="events-title">Events</h2>
+      <p class="lede">Talks, workshops, and meetups. Add these to your calendar and share with colleagues.</p>
+
+      <div class="notice" role="status">
+        <strong>How to update:</strong> Edit this page in GitHub and duplicate a <em>card</em> below for each new event. Fill in the date/time, title, and link.
+      </div>
+
+      <div class="grid cols-2" style="margin-top:1rem">
+        <!-- Event card template -->
+        <article class="card" itemscope itemtype="https://schema.org/Event">
+          <div class="event">
+            <time datetime="2025-11-12T12:30:00Z" itemprop="startDate">12 Nov 2025, 12:30 UTC</time>
+            <div>
+              <a itemprop="url" href="#"><h3 itemprop="name">Fairness in Health Data Linkage</h3></a>
+              <p class="muted" itemprop="description">Panel discussion on measuring and mitigating bias in record linkage for public health.
+              <span class="badge">Online</span></p>
+              <p>
+                <a href="#">Register</a> · <a href="#">Add to calendar</a>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" itemscope itemtype="https://schema.org/Event">
+          <div class="event">
+            <time datetime="2026-01-20T17:00:00Z" itemprop="startDate">20 Jan 2026, 17:00 UTC</time>
+            <div>
+              <a itemprop="url" href="#"><h3 itemprop="name">Community Roundtable: Health Justice Priorities</h3></a>
+              <p class="muted" itemprop="description">Open roundtable to set priorities for the year and form working groups. <span class="badge">Hybrid</span></p>
+              <p>
+                <a href="#">Agenda</a> · <a href="#">Slides</a>
+              </p>
+            </div>
+          </div>
+        </article>
+        <!-- /Event card template -->
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-title">
+    <div class="container">
+      <h2 id="about-title">About</h2>
+      <p class="lede">Our SIG brings together people committed to structural change. We focus on practical methods and governance that embed justice into health data, services, and policy.</p>
+
+      <div class="grid cols-2" style="margin-top:1rem">
+        <article class="card">
+          <h3>What we do</h3>
+          <ul>
+            <li>Host regular seminars and skill-shares</li>
+            <li>Curate resources and good practice</li>
+            <li>Support collaborative research and advocacy</li>
+            <li>Connect practitioners across sectors</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>How to get involved</h3>
+          <ul>
+            <li>Join our mailing list</li>
+            <li>Propose a talk or workshop</li>
+            <li>Start or join a working group</li>
+            <li>Contribute to our resources</li>
+          </ul>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="people" aria-labelledby="people-title">
+    <div class="container">
+      <h2 id="people-title">People</h2>
+      <p class="lede">Organisers and contributors. Want to be listed? Open a pull request or email us.</p>
+
+      <div class="grid cols-3 people" style="margin-top:1rem">
+        <!-- Person card template -->
+        <article class="card person">
+          <div class="avatar" aria-hidden="true">JS</div>
+          <div>
+            <h3 style="margin:.1rem 0 .25rem">Jamie Smith</h3>
+            <p class="muted">Co‑chair · University of Somewhere</p>
+            <p><a href="mailto:jamie.smith@example.org">Email</a> · <a href="#">Website</a> · <a href="#">@jamie</a></p>
+          </div>
+        </article>
+        <article class="card person">
+          <div class="avatar" aria-hidden="true">AZ</div>
+          <div>
+            <h3 style="margin:.1rem 0 .25rem">Amira Zhang</h3>
+            <p class="muted">Coordinator · Public Health Org</p>
+            <p><a href="mailto:amira.zhang@example.org">Email</a> · <a href="#">Website</a></p>
+          </div>
+        </article>
+        <article class="card person">
+          <div class="avatar" aria-hidden="true">LT</div>
+          <div>
+            <h3 style="margin:.1rem 0 .25rem">Leo Thomas</h3>
+            <p class="muted">Outreach · Community Partner</p>
+            <p><a href="mailto:leo.thomas@example.org">Email</a></p>
+          </div>
+        </article>
+        <!-- /Person card template -->
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><strong>Health Justice Special Interest Group</strong><br>
+        <span>© <span id="year"></span> Health Justice SIG. Built with GitHub Pages.</span>
+      </p>
+      <p>Questions or suggestions? <a href="mailto:info@example.org">Contact us</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Update year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
